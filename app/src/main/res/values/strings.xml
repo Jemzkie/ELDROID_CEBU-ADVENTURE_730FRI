@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">cebuadventure</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explore">Explore</string>
+    <string name="location">Location</string>
+    <string name="hotels">Hotels</string>
+    <string name="food">Food</string>
+    <string name="adventure">Adventure</string>
+    <string name="home">Home</string>
+    <string name="itineraries">Itineraries</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="cebu">Cebu</string>
+    <string name="popular">Popular</string>
+    <string name="todo">TODO</string>
+    <string name="popular_place_image">Popular place image</string>
+    <string name="magellan_s_cross">Magellan\'s Cross</string>
+    <string name="recommended">Recommended</string>
+    <string name="fort_san_pedro">Fort San Pedro</string>
+    <string name="kawasan_falls">Kawasan Falls</string>
+    <string name="hot_deal">Hot Deal</string>
+    <string name="kawasanfalls">Kawasan Falls</string>
+    <string name="hot_deal1">Hot Deal</string>
+    <string name="fort_san_pedro1">Fort San Pedro</string>
+
+</resources>

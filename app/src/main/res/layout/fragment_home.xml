@@ -1,0 +1,260 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    tools:context=".HomeFragment">
+
+    <!-- Explore Cebu Title and City Selector -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/explore"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+        <Spinner
+            android:id="@+id/spinner_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cebu"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:background="@drawable/searchbarbackground"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:queryHint="Search" />
+
+    <!-- Tab Menu -->
+    <com.google.android.material.tabs.TabLayout
+        android:background="@drawable/background"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable">
+
+        <com.google.android.material.tabs.TabItem
+            android:text="@string/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <com.google.android.material.tabs.TabItem
+            android:text="@string/hotels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:text="@string/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:text="@string/adventure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Popular Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/popular"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <!-- Recommended Section -->
+
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:padding="8dp">
+      <!-- Main Image of the Popular Destination -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_popular"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/magellancross"
+            android:contentDescription="@string/popular_place_image"
+            app:shapeAppearanceOverlay="@style/RoundedCornersShape" />
+
+        <!-- Overlay with Text and Favorite Button -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#80000000"
+        android:padding="8dp"
+          tools:ignore="ExtraText">
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/magellan_s_cross"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Heart Icon as ImageButton -->
+          <ImageButton
+              android:id="@+id/btn_favorite"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:contentDescription="@string/todo"
+              android:src="@drawable/baseline_heart_border_24"
+              tools:ignore="TouchTargetSizeCheck" /> <!-- Replace with heart icon drawable -->
+              android:background="?attr/selectableItemBackgroundBorderless"
+              android:contentDescription="Favorite button"
+              android:tint="@android:color/white" />
+      </LinearLayout>
+    </RelativeLayout>
+    <!-- Recommended-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommended"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Fort San Pedro Section -->
+
+        <!-- Kawasan Falls Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/searchbarbackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Image for Fort San Pedro -->
+            <ImageView
+                android:id="@+id/image_fort_san_pedro"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/fort_san_pedro1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sanpedro"
+                app:shapeAppearanceOverlay="@style/RoundedCornersShape"
+                tools:ignore="VisualLintBounds" />
+
+            <!-- Text for Fort San Pedro -->
+
+            <!-- Subtitle for Fort San Pedro -->
+            <TextView
+                android:id="@+id/text_fort_san_pedro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/fort_san_pedro"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_fort_san_pedro_deal"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:text="@string/hot_deal1"
+                android:textColor="@android:color/black"
+                android:textSize="8sp"
+                tools:ignore="SmallSp,TextSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/searchbarbackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Image for Kawasan Falls -->
+            <ImageView
+                android:id="@+id/image_kawasan_falls"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/kawasanfalls"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kawasanfalls"
+                app:shapeAppearanceOverlay="@style/RoundedCornersShape" />
+
+            <!-- Text for Kawasan Falls -->
+            <TextView
+                android:id="@+id/text_kawasan_falls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/kawasan_falls"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Subtitle for Kawasan Falls -->
+            <TextView
+                android:id="@+id/text_kawasan_falls_deal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_deal"
+                android:textColor="@android:color/black"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

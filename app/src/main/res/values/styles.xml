@@ -1,0 +1,6 @@
+<resources>
+    <style name="RoundedCornersShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Adjust corner size as needed -->
+    </style>
+</resources>
