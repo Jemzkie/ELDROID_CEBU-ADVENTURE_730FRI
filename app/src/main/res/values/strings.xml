@@ -5,4 +5,8 @@
     <string name="plan_your">Plan your</string>
     <string name="explore">Explore</string>
     <string name="todo">TODO</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="you_can_change_your_password_by_sending_us_a_email">You can change your password by sending us a Email</string>
+    <string name="email">Email</string>
+    <string name="send">Send</string>
 </resources>
